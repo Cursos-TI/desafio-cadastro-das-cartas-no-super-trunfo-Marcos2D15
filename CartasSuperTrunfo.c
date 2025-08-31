@@ -13,7 +13,7 @@ typedef struct{
     int pontosTuristicos;            // Quantidades de Pontos Turíscos 
 } Carta;
 
-void cadastrarCartas (Carta *carta, int numero){
+void cadastrarCarta(Carta *carta, int numero){
     printf ("\n--- Cadastro da Carta %d--- \n", numero + 1);
     
     printf(" Estado (letra de A a H): ");
@@ -26,7 +26,7 @@ void cadastrarCartas (Carta *carta, int numero){
     scanf(" %[^\n]", carta->nomeCidade);   // Lê string com espaços
 
     printf("População: ");
-    scanf("%d, &carta->populacao");
+    scanf("%d", &carta->populacao);
 
     printf("Área (em km²): ");
     scanf("%f", &carta->pib);
