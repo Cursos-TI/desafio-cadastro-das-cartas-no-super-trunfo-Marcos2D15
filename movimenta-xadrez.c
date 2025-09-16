@@ -1,40 +1,66 @@
 #include <stdio.h>
 
 int main (){
-    //===============================
-    //Movimentoda TORRE (usando for)
-    //===============================
-    int casasTorre = 5; //Qnautidade de casas que a torre vai andar para a direita
+    // =============================
+    // Movimentos da Torre (exemplo)
+    // =============================
     printf("Movimento da Torre:\n");
-    for (int i = 1; i <= casasTorre; i++){
-        printf("Direita\n"); //Torre anda só para a direita caso
+    for(int i = 0; i < 3; i++) {
+        printf("Direita\n");
     }
 
     printf("\n");
 
-    //===============================
-    //Movimento do BISPO (usando while)
-    //===============================
-    int casasBispo = 5; //Quantidade de casas que o Bispo vai andar
-    int i = 1;          //Contador do while
+    // =============================
+    // Movimentos do Bispo (exemplo)
+    // =============================
     printf("Movimento do Bispo:\n");
-    while (i <= casasBispo){
-        printf("Cima, Direita\n"); //Movimento na diagonal
-        i++; //Incremta o contador
+    int j = 0;
+    while (j < 3) {
+        printf("Diagonal Direita-Cima\n");
+        j++;
     }
-
+    
     printf("\n");
 
-    //===============================
-    //Movimento da RAINHA (usando do while)
-    //===============================
-    int casasRainha = 8; // Quantidade de casa que a Rainha vai andar
-    int j = 1;           //Contador do do while
+    // ==============================
+    // Movimentos da Rainha (exemplo)
+    // ==============================
     printf("Movimento da Rainha:\n");
-    do {
-        printf("Esquerda\n");  // Rainha anda só para a esquerda neste caso
-        j++;
-    } while (j <= casasRainha);
+    int k = 0;
+    do{
+        printf("Esquerda\n");
+        k++;
+    } while (k < 3);
+    
+    // ===============================
+    // Movimento do Cavalo
+    //================================
+    printf("\nMovimento do Cavalo:\n");
 
+    // O cavalo deve andar 2 casa para baixo e 1 paea a esquerda
+    int movimentosBaixo = 2;
+    int movimentosEsquerda = 1;
+
+    // O loop FOR para percorrer as duas casas para baixo
+    for (int i = 0; i < movimentosBaixo; i++) {
+        printf("Baixo\n");
+
+        // Dentro do loop usamos im WHILE apenas para ilustrar a aninhagem
+        // (mesmo que aqui ele só rode 0 ou 1 vez dependendo da lógica).
+        int aux = 0;
+        while (aux < 0) {
+            printf("Nada\n"); // Só exemplo, não será executado
+            aux++;
+        }    
+    }
+
+    // Depois, um loop WHILE para a casa á esquerda
+    int cont = 0;
+    while (cont < movimentosEsquerda) {
+        printf("Esquerda\n");
+        cont++;
+    }
+    
     return 0;
 }
